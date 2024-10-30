@@ -1,0 +1,4 @@
+-- database: /Users/kyungkim/nambu2024/nodejs/06_REST/ch06_02/post.db
+
+SELECT p.id, '[' || group_concat('{"id":'|| c.id || ',"content":"' || c.content || '"}') || ']' as comments 
+FROM posts p left join comments c on p.id=c.postId;

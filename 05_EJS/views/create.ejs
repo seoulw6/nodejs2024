@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Minified version -->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <style>
+        .form-box input,
+        textarea {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .form-box textarea {
+            height: 200px;
+        }
+
+        .form-box div {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h1>글쓰기</h1>
+        <form method="post" action="/create">
+            <div class="form-box">
+                <div>
+                    <label for="title">제목</label>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div>
+                    <label for="title">작성자</label>
+                    <input type="text" id="author" name="author">
+                </div>
+                <div>
+                    <label for="content">내용</label>
+                    <textarea id="content" name="content"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">저장</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</body>

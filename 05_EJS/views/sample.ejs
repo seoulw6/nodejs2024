@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Sample</h1>
+    <ul>
+        <% for(let i=0; i<data.length; i++ ){ if(i%2==0){ %>
+            <li>
+                <%= data[i]["title"] %>
+                    <%= data[i]["content"] %>
+            </li>
+            <% } }%>
+    </ul>
+    <hr>
+    <h1>Sample2</h1>
+    <ul>
+        <% 
+        let i=0;
+        data.forEach( x=> {
+            if(i%2==1){
+            %>
+            <li>
+                <%= x.title %>
+                    <%= x.content %>
+            </li>
+            <% }
+        i++;
+        }) %>
+    </ul>
+</body>
+
+</html>
